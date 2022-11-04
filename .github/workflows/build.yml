@@ -19,7 +19,6 @@ jobs:
   apk:
     runs-on: ubuntu-latest
     timeout-minutes: 360
-    if: github.actor == 'robertsLando'
     steps:
       - uses: actions/checkout@v2
       - uses: crazy-max/ghaction-docker-buildx@v1
