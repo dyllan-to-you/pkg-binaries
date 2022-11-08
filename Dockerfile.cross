@@ -12,7 +12,7 @@ RUN __DEPENDENCIES__
 
 ENV PKG_CACHE_PATH=/fetched
 
-RUN git clone -b master --single-branch https://github.com/vercel/pkg-fetch.git /build
+RUN git clone -b main --single-branch https://github.com/vercel/pkg-fetch.git /build
 WORKDIR /build
 RUN yarn && yarn run babel
 RUN mkdir -p /fetched
