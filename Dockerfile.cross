@@ -14,7 +14,7 @@ ENV PKG_CACHE_PATH=/fetched
 
 RUN git clone -b main --single-branch https://github.com/vercel/pkg-fetch.git /build
 WORKDIR /build
-RUN yarn && yarn run babel
+RUN yarn && yarn run build
 RUN mkdir -p /fetched
 
 RUN MAKE_JOB_COUNT=${NPROC} yarn run bin ${PKG_NODE} ${PKG_OS} ${PKG_ARCH}
